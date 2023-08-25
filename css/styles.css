@@ -6,6 +6,7 @@
     --cloud: #f4f4fd; /*color section3*/
     --ocean: #404bbf; /*color  menu hover focus*/
     --cornflower: #e7e9fc; /*border color */
+    --grey: rgba(46, 47, 66, 0.7); /*background hero image */
 }
 /* Обнулення */
 * {
@@ -122,13 +123,16 @@ a.nav-menu:focus {
 
 /* --SECTION 1-- */
 .section-main {
-    background: var(--navyblue);
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: url(../images/people-office.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0;
 }
 
 .title-main {
     /* Header h1 */
-    background: var(--navyblue);
     color: var(--white);
     text-align: center;
     font-size: 56px;
