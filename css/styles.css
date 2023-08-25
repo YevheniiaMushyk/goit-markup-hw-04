@@ -7,6 +7,7 @@
     --ocean: #404bbf; /*color  menu hover focus*/
     --cornflower: #e7e9fc; /*border color */
     --grey: rgba(46, 47, 66, 0.7); /*background hero image */
+    --lightslate: #8e8f99;
 }
 /* Обнулення */
 * {
@@ -55,9 +56,9 @@ ul {
     list-style-type: none;
 }
 
-.header-navlist li a {
+/* .header-navlist li a {
     padding: 24px 0;
-}
+} */
 
 a.nav-menu {
     color: var(--navyblue);
@@ -123,8 +124,9 @@ a.nav-menu:focus {
 
 /* --SECTION 1-- */
 .section-main {
-    background-color: rgba(46, 47, 66, 0.7);
-    background-image: url(../images/people-office.png);
+    background-color: var(--grey);
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -224,6 +226,15 @@ a.nav-menu:focus {
     min-width: 264px;
 }
 
+.section-vh_img {
+    display: block;
+    border: 1px solid var(--lightslate);
+    border-radius: 4px;
+    background-color: var(--cloud);
+    padding: 24px 100px;
+    margin-bottom: 8px;
+}
+
 .section-vh_list_item h3 {
     margin-bottom: 8px;
 }
@@ -257,8 +268,32 @@ a.nav-menu:focus {
     padding: 32px 0;
 }
 
-.card_content h3 {
+.card_content h3,
+p {
     margin-bottom: 8px;
+}
+
+.traling_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    /* background-image: url(../images/Ellipse.svg); */
+}
+
+.traling_icons_item {
+    display: block;
+    min-width: 40px;
+    height: 100%;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--iris);
+    background-image: url(../images/Ellipse.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* --SECTION 4-- */
@@ -285,9 +320,9 @@ a.nav-menu:focus {
     min-width: 360px;
 }
 
-.section-op_list_item:not(last-child) {
+/* .section-op_list_item:not(last-child) {
     margin-bottom: 48px;
-}
+} */
 
 .team_card {
     width: 100%;
