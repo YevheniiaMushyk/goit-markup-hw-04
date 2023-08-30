@@ -8,6 +8,7 @@
     --cornflower: #e7e9fc; /*border color */
     --grey: rgba(46, 47, 66, 0.7); /*background hero image */
     --lightslate: #8e8f99;
+    --hovericon: #31d0aa;
 }
 /* Обнулення */
 * {
@@ -64,6 +65,9 @@ ul {
 a.nav-menu {
     color: var(--navyblue);
     font-weight: 500;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a.nav-menu:hover,
@@ -91,6 +95,9 @@ a.nav-menu:focus {
 
 .nav-address {
     color: var(--slate);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-address:hover,
@@ -144,7 +151,7 @@ a.nav-menu:focus {
         url(../images/people-office.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     padding: 188px 0;
 }
 
@@ -174,6 +181,9 @@ a.nav-menu:focus {
     border-radius: 4px;
     margin: 48px auto 0 auto;
     display: block;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -309,6 +319,15 @@ a.nav-menu:focus {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition-property: background-color, background-image;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.traling_icons_item:hover,
+.traling_icons_item:focus {
+    background-color: var(--ocean);
+    background-image: none;
 }
 
 .traling_icons_item a svg {
@@ -340,27 +359,55 @@ a.nav-menu:focus {
     flex-shrink: 0;
     width: calc((100% - 48px) / 3);
     min-width: 360px;
+    height: 100%;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
-.section-op_list_item {
+.section-op_list_item:hover,
+.section-op_list_item:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    background-image: url(./images/img_fon.jpg);
+}
+
+.overwrap {
     position: relative;
     z-index: 1;
 }
 
-.section-ot_text {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    z-index: 2;
+    background-image: url(../images/img_fon.jpg);
+}
+
+.overlay_text {
     color: var(--cloud);
     padding: 0 32px;
-    position: absolute;
     top: 40px;
-    z-index: 2;
+}
+
+.section-op_list_item:hover .overlay {
+    transform: translateY(0);
 }
 
 .team_card {
+    z-index: 3;
     width: 100%;
     align-items: center;
     padding: 32px 16px;
     border: 1px solid var(--cornflower);
     border-top: none;
+    overflow: hidden;
 }
 
 .team_card h3 {
@@ -423,6 +470,15 @@ a.nav-menu:focus {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition-property: background-color, background-image;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social_icons_item:hover,
+.social_icons_item:focus {
+    background-color: var(--hovericon);
+    background-image: none;
 }
 
 .social_icons_item a {
