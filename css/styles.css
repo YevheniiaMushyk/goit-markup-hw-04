@@ -43,12 +43,13 @@ body {
 /* --HEADER-- */
 .header-nav a {
     padding: 24px 0;
-    position: relative;
 }
+/* position: relative;
+} */
 
 .logo {
     display: inline-block;
-    color: var(--ocean);
+    color: var(--iris);
     font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -58,8 +59,10 @@ body {
     margin-right: 76px;
 }
 
-.header-nav .logo-half2 {
-    color: var(--navyblue);
+.header-nav .current {
+    /* color: var(--navyblue); */
+    color: #404bbf;
+    position: relative;
 }
 
 a.nav-menu {
@@ -75,7 +78,7 @@ a.nav-menu:focus {
     color: var(--ocean);
 }
 
-.nav-menu::after {
+.current::after {
     position: absolute;
     left: 0;
     /* left: 5%; */
