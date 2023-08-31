@@ -44,7 +44,7 @@ body {
 .header-nav a {
     padding: 24px 0;
     position: relative;
-    color: var(--ocean);
+    color: #404bbf;
 }
 
 .logo {
