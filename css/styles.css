@@ -44,13 +44,11 @@ body {
 .header-nav a {
     padding: 24px 0;
     position: relative;
-    /* color: var(--navyblue); */
-    color: #404bbf;
 }
 
-.header-nav .logo {
+.logo {
     display: inline-block;
-    color: var(--iris);
+    color: var(--ocean);
     font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -65,6 +63,7 @@ body {
 }
 
 a.nav-menu {
+    color: var(--navyblue);
     font-weight: 500;
     transition-property: color;
     transition-duration: 250ms;
@@ -428,19 +427,19 @@ a.nav-menu:focus {
 }
 
 /* --FOOTER-- */
-.footer {
+.footer_section {
     background-color: var(--navyblue);
     padding: 100px 0;
 }
 
-.footer_flex {
+.footer {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 120px;
 }
 
-.footer_flex .logo {
+.footer .logo {
     display: inline-block;
     color: var(--iris);
     font-family: Raleway, sans-serif;
