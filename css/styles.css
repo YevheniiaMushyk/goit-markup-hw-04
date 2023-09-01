@@ -409,7 +409,7 @@ a.nav-menu:focus {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay:hover .overlay_text {
+.section-op_list_item:hover .overlay_text {
     transform: translateY(0);
 }
 
@@ -449,6 +449,7 @@ a.nav-menu:focus {
     letter-spacing: 0.54px;
     text-transform: uppercase;
     margin-right: 76px;
+    margin-bottom: 16px;
 }
 
 .footer_text {
